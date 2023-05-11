@@ -1,27 +1,62 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.Left-Side{
+  background: url(../../assets/img/colorful_hot_air_balloon-High_quality_HD_Wallpaper_1366x768.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.Right-Side{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.Form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 60vh;
 }
 
-#container a {
-  text-decoration: none;
+ion-label{
+  font-size: 3em;
+  font-weight: bold;
 }
+
+ion-item{
+  margin: 20px 0 0 0;
+}
+
+#Btn-Criar{
+  margin: 40px 30px 30px 30px;
+  width: 150px;
+  height: 60px;
+  --border-radius: 10px;
+}
+
+
+ion-button{
+  --background: #159A9C;
+  --border-radius: 10px;
+  --padding: 15px;
+}
+
+#Facebook{
+  --background: #005DB4;
+  --border-radius: 10px;
+}
+
+#Twitter{
+  --background: #00A1FC;
+  --border-radius: 10px;
+}
+
+#Google{
+  --background: #A03131;
+  --border-radius: 10px;
+}
+
+

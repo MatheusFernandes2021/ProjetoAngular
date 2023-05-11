@@ -1,22 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-content [fullscreen]="true">
+    <ion-row>
+      <ion-col class="Left-Side" size="6">
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
-</ion-content>
+      </ion-col>
+
+      <ion-col class="Right-Side" size="6">
+        <ion-label>Criar Conta!</ion-label>
+        <ion-col class="Form" size="4">
+          <ion-item>
+            <ion-input label="Nome" placeholder=""></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-input label="Email" type="email" placeholder=""></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input label="Senha" type="password" value="password"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input label="Confirmar Senha" type="password" value="password"></ion-input>
+          </ion-item>
+
+          <ion-button id="Btn-Criar">Criar Conta</ion-button> 
+
+          <p>Login com</p>
+          <ion-button id="Facebook">Facebook</ion-button> 
+          <ion-button id="Twitter">Twitter</ion-button> 
+          <ion-button id="Google">Google</ion-button> 
+        </ion-col>
+      </ion-col>
+    </ion-row>
+
+  </ion-content>
