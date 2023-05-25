@@ -1,27 +1,72 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+*{
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+
+  &__title{
+    margin: 5px 0 0 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #F2A341;
+  }
+
+  &__title:hover{
+    background: #F2A341;
+    color: #FFF;
+    padding: 10px;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+    cursor: pointer;
+  }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.calendario{
+  &__foto{ // Mesma coisa que calendario__foto
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: -6rem;
+  } 
 
-  color: #8c8c8c;
+  &__mes{
+    font-size: 1.6rem;
+    color: #65818C;
+    margin-right: 1.5rem;
+  }
 
-  margin: 0;
-}
+  &__ano{
+    font-size: 1.6rem;
+    color: #F2B872;
+  }
 
-#container a {
-  text-decoration: none;
+  &__dia-semana{
+    color: #0D0D0D;
+  }
+
+  &__dia-semana:hover{
+    background: #0D0D0D;
+    color: #FFF;
+    transition: 0.5s all ease;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  &__dia{
+    color: #593622;
+  }
+
+  &__dia:hover{
+    background: #593622;
+    color: #FFF;
+    transition: 0.5s all ease;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
 }
