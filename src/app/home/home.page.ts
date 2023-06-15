@@ -13,7 +13,7 @@ export class HomePage {
     nome: 'Carlitos', 
     profissao: 'Professor', 
     mencao: '@carlitos', 
-    biografia: 'Professor e gestor de projeots', 
+    biografia: 'Professor e gestor de projetos', 
     cidade: 'Tatuí', 
     estado: 'São Paulo', 
     idioma: 'Português',
