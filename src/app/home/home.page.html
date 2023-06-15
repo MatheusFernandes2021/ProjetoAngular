@@ -5,7 +5,7 @@
       <!-- Cabeçalho -->
       <ion-row>
         <ion-col size="4">
-          <img src="">
+          <img src="https://images.pexels.com/photos/395085/pexels-photo-395085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
         </ion-col>
   
         <ion-col size="8">
@@ -92,8 +92,8 @@
 
       <!-- Sobre -->
       <ion-row>
-        <ion-col size="12">Sobre</ion-col>
-        <ion-col size="12">{{ perfil.biografia }}</ion-col>
+        <ion-col size="12" class="ion-text-start">Sobre</ion-col>
+        <ion-col size="12" class="ion-text-start">{{ perfil.biografia }}</ion-col>
       </ion-row>
 
       <!--  Linha de divisão -->
@@ -103,10 +103,63 @@
         </ion-col>
       </ion-row>
 
-      <!-- Postagens -->
+      <!-- Postagens de Amigos -->
       <ion-row>
-        
+        <ion-col size="12" class="ion-text-start">
+          <ion-label>Postagens de Amigos</ion-label>
+        </ion-col>
       </ion-row>
+
+      <!-- Postagens -->
+      <ng-container *ngFor="let post of this.postagens">
+        <ion-row>
+          <ion-col size="4">
+            <ion-avatar>
+              <ng-container *ngIf="post.perfil.foto">
+                <img src="{{ post.perfil.foto }}">
+              </ng-container>
+
+              <ng-container *ngIf="!post.perfil.foto">
+                <img src="https://cdn4.iconfinder.com/data/icons/essential-app-2/16/user-avatar-human-admin-login-512.png">
+              </ng-container>
+            </ion-avatar>
+          </ion-col>
+
+          <ion-col size="8">
+            <ion-row>
+              <ion-col size="auto">
+                <ion-label>{{ post.perfil.nome }}</ion-label>
+              </ion-col>
+              <ion-col size="auto">
+                <ion-label>{{ post.perfil.mencao_perfil }}</ion-label>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="12" class="ion-text-start">
+                <ion-label>{{ post.postagem.mensagem }}</ion-label>
+              </ion-col>
+            </ion-row>
+
+            <ng-container *ngIf="post.postagem.foto">
+              <ion-row>
+                <ion-col>
+                  <img src="{{ post.postagem.foto }}">
+                </ion-col>
+              </ion-row>
+            </ng-container>
+
+
+          </ion-col>
+        </ion-row>
+        
+        <!--  Linha de divisão -->
+        <ion-row>
+          <ion-col size="12">
+            <ion-item-divider></ion-item-divider>
+          </ion-col>
+        </ion-row>
+      </ng-container>
 
 
 
