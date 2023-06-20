@@ -1,27 +1,52 @@
-#container {
+*{
+  background: #333a58;
+  overflow-y: hidden;
+}
+
+.Visor{
+  height: 32vh;
+  font-size: 2em;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.Visor h1{
+  margin-top: 20px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.Input{
+  width: 100%;
 }
 
-#container a {
-  text-decoration: none;
+.Botoes{
+  height: 68vh;
+  text-align: center;
+  color: #ff3764;
+}
+
+#Valor{
+  font-size: 6.8em;
+  text-align: end;
+}
+
+.Num{
+  font-size: 2em;
+  background: #3b3f5d;
+  border: 2px solid #333a58;
+}
+
+.Operacao{
+  font-size: 2em;
+  background: #4e566e;
+  border: 2px solid #333a58;
+}
+
+.Igual{
+  font-size: 2em;
+  background: #ff3764;
+  color: #FFF;
+  border: 2px solid #333a58;
+}
+
+ion-icon{
+  background: none;
 }

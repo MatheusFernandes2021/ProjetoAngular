@@ -1,22 +1,87 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
+  <div class="Visor">
+    <h1>Calculadora</h1>
   </div>
+
+
+  <div class="Botoes">
+    <h1 id="Valor">20</h1>
+    <ion-row class="Primeira_linha">
+      <ion-col size="3" class="Operacao">
+        C
+      </ion-col>
+      <ion-col size="3" class="Operacao">
+        %
+      </ion-col>
+      <ion-col size="3" class="Operacao">
+        /
+      </ion-col>
+      <ion-col size="3" class="Operacao">
+        X
+      </ion-col>
+    </ion-row>
+
+    
+      <ion-row class="Segunda_linha">
+        <ion-col size="3" class="Num">
+          7
+        </ion-col>
+        <ion-col size="3" class="Num">
+          8
+        </ion-col>
+        <ion-col size="3" class="Num">
+          9
+        </ion-col>
+        <ion-col size="3" class="Operacao">
+          -
+        </ion-col>
+      </ion-row>
+
+      
+      <ion-row class="Terceira_linha">
+        <ion-col size="3" class="Num">
+          4
+        </ion-col>
+        <ion-col size="3" class="Num">
+          5
+        </ion-col>
+        <ion-col size="3" class="Num">
+          6
+        </ion-col>
+        <ion-col size="3" class="Operacao">
+          +
+        </ion-col>
+      </ion-row>
+
+    
+      <ion-row class="Quarta_linha">
+        <ion-col size="3" class="Num">
+          1
+        </ion-col>
+        <ion-col size="3" class="Num">
+          2
+        </ion-col>
+        <ion-col size="3" class="Num">
+          3
+        </ion-col>
+        <ion-col size="3" class="Operacao">
+          <ion-icon size="3" name="backspace-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row class="Quinta_linha">
+        <ion-col size="3" class="Num">
+          0
+        </ion-col>
+        <ion-col size="3" class="Num">
+          .
+        </ion-col>
+
+        <ion-col size="6" class="Igual">
+          =
+        </ion-col>
+      </ion-row>
+  </div>
+
 </ion-content>
