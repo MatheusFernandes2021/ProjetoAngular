@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap');
+
 *{
   background: #333a58;
   overflow-y: hidden;
@@ -11,10 +13,17 @@
 
 .Visor h1{
   margin-top: 20px;
+  font-family: 'Nunito', sans-serif;
 }
 
-.Input{
-  width: 100%;
+#Valor{
+  margin-bottom: 10px;
+}
+
+#Historico{
+  text-align: start;
+  font-size: 1.5em;
+  margin-left: 10px;
 }
 
 .Botoes{
@@ -34,10 +43,28 @@
   border: 2px solid #333a58;
 }
 
+.Num:hover, .Num:active{
+  border: 2px solid #3b3f5d;
+  background: #333a58;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#C{
+  color: #e07265;
+}
+
 .Operacao{
   font-size: 2em;
   background: #4e566e;
   border: 2px solid #333a58;
+}
+
+.Operacao:hover, .Operacao:active{
+  background: #333a58;
+  border: 2px solid #4e566e;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .Igual{
@@ -45,6 +72,13 @@
   background: #ff3764;
   color: #FFF;
   border: 2px solid #333a58;
+}
+
+.Igual:hover{
+  background: #333a58;
+  border: 2px solid #ff3764;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 ion-icon{
