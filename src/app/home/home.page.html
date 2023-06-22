@@ -5,7 +5,7 @@
 
 
   <div class="Botoes">
-    <h1 id="Valor">0</h1>
+    <h1 id="Valor">{{this.calc.num}}</h1>
 
     <h1 id="Historico">Histórico:</h1>
 
@@ -13,13 +13,13 @@
       <ion-col size="3" id="C" class="Operacao" (click)="this.clear()">
         C
       </ion-col>
-      <ion-col size="3" class="Operacao">
+      <ion-col size="3" class="Operacao" (click)="this.operation('%')">
         %
       </ion-col>
-      <ion-col size="3" class="Operacao">
+      <ion-col size="3" class="Operacao" (click)="this.operation('/')">
         ÷
       </ion-col>
-      <ion-col size="3" class="Operacao">
+      <ion-col size="3" class="Operacao" (click)="this.operation('*')">
         X
       </ion-col>
     </ion-row>
@@ -35,7 +35,7 @@
       <ion-col size="3" class="Num" (click)="this.addNum('9')">
         9
       </ion-col>
-      <ion-col size="3" class="Operacao">
+      <ion-col size="3" class="Operacao" (click)="this.operation('-')">
         -
       </ion-col>
     </ion-row>
@@ -51,7 +51,7 @@
       <ion-col size="3" class="Num" (click)="this.addNum('6')">
         6
       </ion-col>
-      <ion-col size="3" class="Operacao">
+      <ion-col size="3" class="Operacao" (click)="this.operation('+')">
         +
       </ion-col>
     </ion-row>
@@ -67,25 +67,25 @@
       <ion-col size="3" class="Num" (click)="this.addNum('3')">
         3
       </ion-col>
-      <ion-col size="3" class="Operacao" (click)="this.clear()">
+      <ion-col size="3" class="Operacao" (click)="this.rmvNum()">
         <ion-icon size="3" name="backspace-outline"></ion-icon>
       </ion-col>
     </ion-row>
 
 
     <ion-row class="Quinta_linha">
-      <ion-col size="3" class="Num">
+      <ion-col size="3" class="Num" (click)="this.addNum('0')">
         0
       </ion-col>
       <ion-col size="3" class="Num">
         .
       </ion-col>
 
-      <ion-col size="3" class="Igual">
+      <ion-col size="3" class="Igual" (click)="this.eql()">
         =
       </ion-col>
 
-      <ion-col size="3" class="Operacao">
+      <ion-col size="3" class="Operacao" (click)="this.invNum()">
         +/-
       </ion-col>
     </ion-row>

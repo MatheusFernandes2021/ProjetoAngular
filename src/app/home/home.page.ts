@@ -21,7 +21,7 @@ export class HomePage {
 
     addNum(n:string){
       let vrf = (this.calc.num == "0" && n != ".") 
-      this.calc.num  = (vrf ? n : this.calc.num + n);
+      this.calc.num = (vrf ? n : this.calc.num + n);
     }
     
     operation(op:string){
@@ -32,7 +32,7 @@ export class HomePage {
         this.calc.num = (this.calc.num[0] == "-" ? this.calc.num.slice(1):"-"+this.calc.num)
     }
     rmvNum(){
-        this.calc.num.slice(0,-1);
+        this.calc.num = this.calc.num.substring(0, this.calc.num.length -1);
     }
     eql(){
         this.calc.prevNum += this.calc.num;
