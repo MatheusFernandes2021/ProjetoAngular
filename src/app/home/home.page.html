@@ -10,7 +10,7 @@
     <h1 id="Historico">Histórico:</h1>
 
     <ion-row class="Primeira_linha">
-      <ion-col size="3" id="C" class="Operacao">
+      <ion-col size="3" id="C" class="Operacao" (click)="this.clear()">
         C
       </ion-col>
       <ion-col size="3" class="Operacao">
@@ -26,8 +26,9 @@
 
     
     <ion-row class="Segunda_linha">
-      <ion-col size="3" class="Num">
-        7
+      <ion-col size="3" class="Num" >
+        <ion-button (click)="this.addNum()">7</ion-button>
+
       </ion-col>
       <ion-col size="3" class="Num">
         8
