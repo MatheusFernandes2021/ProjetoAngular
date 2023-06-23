@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -25,7 +26,8 @@ export class HomePage {
     }
     
     operation(op:string){
-        this.calc.prevNum += `${this.calc.num}${op}`;
+        this.calc.prevNum += `${this.calc.num} ${op} `;
+        this.changeValue();
     }
 
     invNum(){
@@ -37,6 +39,15 @@ export class HomePage {
     eql(){
         this.calc.prevNum += this.calc.num;
         this.calc.result = eval(this.calc.prevNum)
+        this.showEql();
+    }
+
+    showEql(){
+        this.calc.num = this.calc.result
+    }
+
+    changeValue(){
+        this.calc.num = "";
     }
 
     clear(){
@@ -44,6 +55,7 @@ export class HomePage {
         this.calc.prevNum="";
         this.calc.result="";
     }
+
 
     // att:(){
 

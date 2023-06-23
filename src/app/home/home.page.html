@@ -5,9 +5,11 @@
 
 
   <div class="Botoes">
+
     <h1 id="Valor">{{this.calc.num}}</h1>
 
-    <h1 id="Historico">Histórico:</h1>
+
+    <h1 id="Historico">Histórico: {{ this.calc.prevNum }}</h1>
 
     <ion-row class="Primeira_linha">
       <ion-col size="3" id="C" class="Operacao" (click)="this.clear()">
