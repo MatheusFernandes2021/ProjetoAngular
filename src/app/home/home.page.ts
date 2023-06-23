@@ -28,6 +28,7 @@ export class HomePage {
     operation(op:string){
         this.calc.prevNum += `${this.calc.num} ${op} `;
         this.changeValue();
+        this.calc.num = "0";
     }
 
     invNum(){
@@ -35,6 +36,9 @@ export class HomePage {
     }
     rmvNum(){
         this.calc.num = this.calc.num.substring(0, this.calc.num.length -1);
+        if(this.calc.num.length == 0){
+            this.calc.num = "0";
+        }
     }
     eql(){
         this.calc.prevNum += this.calc.num;
