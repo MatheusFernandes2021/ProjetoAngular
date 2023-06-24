@@ -14,7 +14,7 @@ import { IonicModule } from '@ionic/angular';
 export class HomePage {
 
       // Funções calculadora
-      calc = {
+    calc = {
         num:"0",
         prevNum:"",
         result:"",
@@ -26,7 +26,7 @@ export class HomePage {
     }
     
     operation(op:string){
-        this.calc.prevNum += `${this.calc.num} ${op} `;
+        this.calc.prevNum = `${this.calc.num} ${op} `;
         this.changeValue();
         this.calc.num = "0";
     }
@@ -34,20 +34,23 @@ export class HomePage {
     invNum(){
         this.calc.num = (this.calc.num[0] == "-" ? this.calc.num.slice(1):"-"+this.calc.num)
     }
+
     rmvNum(){
         this.calc.num = this.calc.num.substring(0, this.calc.num.length -1);
         if(this.calc.num.length == 0){
             this.calc.num = "0";
         }
     }
+
     eql(){
         this.calc.prevNum += this.calc.num;
-        this.calc.result = eval(this.calc.prevNum)
+        this.calc.result = eval(this.calc.prevNum);
+        this.calc.prevNum += ` = ${this.calc.result} | `;
         this.showEql();
     }
 
     showEql(){
-        this.calc.num = this.calc.result
+        this.calc.num = this.calc.result;
     }
 
     changeValue(){
@@ -55,9 +58,9 @@ export class HomePage {
     }
 
     clear(){
-        this.calc.num="0";
-        this.calc.prevNum="";
-        this.calc.result="";
+        this.calc.num = "0";
+        this.calc.prevNum = "";
+        this.calc.result = "";
     }
 
 

@@ -6,7 +6,7 @@
 }
 
 .Visor{
-  height: 30vh;
+  height: 35vh;
   font-size: 2em;
   text-align: center;
 }
@@ -28,7 +28,7 @@
 }
 
 .Botoes{
-  height: 70vh;
+  height: 65vh;
   text-align: center;
   color: #ff3764;
 }
@@ -87,4 +87,34 @@
 
 ion-icon{
   background: none;
+}
+
+@media (max-width: 480px){
+  .Visor{
+    height: 23vh;
+  }
+
+  .Botoes{
+    height: 77vh;
+  }
+}
+
+@media (max-width: 768px){
+  .Visor{
+    height: 20vh;
+  }
+
+  .Botoes{
+    height: 80vh;
+  }
+}
+
+@media (max-width: 1024px){
+  .Visor{
+    height: 23vh;
+  }
+
+  .Botoes{
+    height: 77vh;
+  }
 }
