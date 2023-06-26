@@ -15,9 +15,9 @@ export class HomePage {
 
       // Funções calculadora
     calc = {
-        num:"0",
-        prevNum:"",
-        result:"",
+        num: "0",
+        prevNum: "",
+        result: "",
     }
 
     addNum(n:string){
@@ -26,8 +26,7 @@ export class HomePage {
     }
     
     operation(op:string){
-        this.calc.prevNum = `${this.calc.num} ${op} `;
-        this.changeValue();
+        this.calc.prevNum += (op != "%" ? `${this.calc.num} ${op} `: `(${this.calc.num}/100) * `);
         this.calc.num = "0";
     }
 
@@ -53,10 +52,6 @@ export class HomePage {
         this.calc.num = this.calc.result;
     }
 
-    changeValue(){
-        this.calc.num = "";
-    }
-
     clear(){
         this.calc.num = "0";
         this.calc.prevNum = "";
@@ -64,7 +59,4 @@ export class HomePage {
     }
 
 
-    // att:(){
-
-    // }
 }
