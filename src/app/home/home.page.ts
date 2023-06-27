@@ -18,15 +18,17 @@ export class HomePage {
         num: "0",
         prevNum: "",
         result: "",
+        historico: ""
     }
 
     addNum(n:string){
-      let vrf = (this.calc.num == "0" && n != ".") 
-      this.calc.num = (vrf ? n : this.calc.num + n);
+        let vrf = (this.calc.num == "0" && n != ".") 
+        this.calc.num = (vrf ? n : this.calc.num + n);
     }
     
     operation(op:string){
-        this.calc.prevNum += (op != "%" ? `${this.calc.num} ${op} `: `(${this.calc.num}/100) * `);
+        this.calc.prevNum += (op != "%" ? `${this.calc.num} ${op} ` : `(${this.calc.num}/100) * `);
+        this.calc.historico = (op != "%" ? `${this.calc.num} ${op} ` : `${this.calc.num} % `);
         this.calc.num = "0";
     }
 
@@ -44,7 +46,8 @@ export class HomePage {
     eql(){
         this.calc.prevNum += this.calc.num;
         this.calc.result = eval(this.calc.prevNum);
-        this.calc.prevNum += ` = ${this.calc.result} | `;
+        this.calc.historico += this.calc.num;
+        this.calc.historico += ` = ${this.calc.result} | `;
         this.showEql();
     }
 
@@ -56,6 +59,7 @@ export class HomePage {
         this.calc.num = "0";
         this.calc.prevNum = "";
         this.calc.result = "";
+        this.calc.historico = "";
     }
 
 
