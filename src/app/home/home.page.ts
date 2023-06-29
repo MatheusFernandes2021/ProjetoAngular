@@ -27,20 +27,25 @@ export class HomePage {
     }
     
     operation(op:string){
-        this.calc.prevNum += (op != "%" ? `${this.calc.num} ${op} ` : `(${this.calc.num}/100) * `);
-        this.calc.historico = (op != "%" ? `${this.calc.num} ${op} ` : `${this.calc.num} % `);
-        this.calc.num = "0";
+        if(this.calc.result != ""){
+            this.calc.prevNum = (op != "%" ? `${this.calc.result} ${op} ` : `(${this.calc.result}/100) * `);
+            this.calc.historico = (op != "%" ? `${this.calc.result} ${op} ` : `${this.calc.result} % `);
+            this.calc.num = "0";
+        }
+        else{
+            this.calc.prevNum += (op != "%" ? `${this.calc.num} ${op} ` : `(${this.calc.num}/100) * `);
+            this.calc.historico = (op != "%" ? `${this.calc.num} ${op} ` : `${this.calc.num} % `);
+            this.calc.num = "0";
+        }            
     }
 
     invNum(){
-        this.calc.num = (this.calc.num[0] == "-" ? this.calc.num.slice(1):"-"+this.calc.num)
+        this.calc.num = (this.calc.num[0] == "-" ? this.calc.num.slice(1):"-"+this.calc.num);
     }
 
     rmvNum(){
         this.calc.num = this.calc.num.substring(0, this.calc.num.length -1);
-        if(this.calc.num.length == 0){
-            this.calc.num = "0";
-        }
+        (this.calc.num.length == 0 ? this.calc.num = "0" : null);
     }
 
     eql(){
