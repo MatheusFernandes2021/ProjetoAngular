@@ -18,23 +18,30 @@ export class HomePage {
         num: "0",
         prevNum: "",
         result: "",
-        historico: ""
+        historico: "",
     }
 
     addNum(n:string){
-        let vrf = (this.calc.num == "0" && n != ".") 
-        this.calc.num = (vrf ? n : this.calc.num + n);
+        let vrf = (this.calc.num == "0" && n != ".")
+        if (n == "." && this.calc.num.includes(".")){
+
+        }else{
+            this.calc.num = (vrf ? n : this.calc.num + n);
+        }
     }
     
     operation(op:string){
         if(this.calc.result != ""){
+            this.calc.historico = this.calc.prevNum
+            this.calc.historico += (op != "%" ? `${this.calc.result} ${op} ` : `${this.calc.result} % `);
             this.calc.prevNum = (op != "%" ? `${this.calc.result} ${op} ` : `(${this.calc.result}/100) * `);
-            this.calc.historico = (op != "%" ? `${this.calc.result} ${op} ` : `${this.calc.result} % `);
             this.calc.num = "0";
+
         }
         else{
+            this.calc.historico = this.calc.prevNum
+            this.calc.historico += (op != "%" ? `${this.calc.num} ${op} ` : `${this.calc.num} % `);
             this.calc.prevNum += (op != "%" ? `${this.calc.num} ${op} ` : `(${this.calc.num}/100) * `);
-            this.calc.historico = (op != "%" ? `${this.calc.num} ${op} ` : `${this.calc.num} % `);
             this.calc.num = "0";
         }            
     }
@@ -49,9 +56,16 @@ export class HomePage {
     }
 
     eql(){
-        this.calc.prevNum += this.calc.num;
+        if(this.calc.historico[this.calc.historico.length-2]=="%"){
+            this.calc.prevNum += `${this.calc.prevNum}`
+            this.calc.prevNum += this.calc.num;
+            console.log(this.calc.prevNum)
+        }else{
+            this.calc.prevNum += this.calc.num;
+        }
+
         this.calc.result = eval(this.calc.prevNum);
-        this.calc.historico += this.calc.num;
+        this.calc.historico = this.calc.prevNum;
         this.calc.historico += ` = ${this.calc.result} | `;
         this.showEql();
     }
